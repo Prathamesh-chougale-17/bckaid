@@ -1,0 +1,28 @@
+{
+  "name": "next-auth-config",
+  "type": "registry:block",
+  "description": "Next Auth configuration",
+  "dependencies": [
+    "next-auth@beta"
+  ],
+  "files": [
+    {
+      "type": "registry:block",
+      "content": "import NextAuth from \"next-auth\";\r\n\r\nexport const { handlers, signIn, signOut, auth } = NextAuth({\r\n  providers: [],\r\n});\r\n",
+      "path": "auth.ts",
+      "target": "auth.ts"
+    },
+    {
+      "type": "registry:block",
+      "content": "export { auth as middleware } from \"@/auth\";\r\n",
+      "path": "middleware.ts",
+      "target": "middleware.ts"
+    },
+    {
+      "type": "registry:block",
+      "content": "import { handlers } from \"@/auth\"; // Referring to the auth.ts we just created\r\nexport const { GET, POST } = handlers;\r\n",
+      "path": "app/api/auth/[...nextauth]/route.ts",
+      "target": "route.ts"
+    }
+  ]
+}

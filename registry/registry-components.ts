@@ -14,4 +14,27 @@ export const ui: Registry = [
       },
     ],
   },
+  {
+    name: "next-auth-config",
+    type: "registry:block",
+    description: "Next Auth configuration",
+    dependencies: ["next-auth@beta"],
+    files: [
+      {
+        path: "block/next-auth/next-auth-config/auth.ts",
+        type: "registry:hook",
+        target: "auth.ts",
+      },
+      {
+        path: "block/next-auth/next-auth-config/middleware.ts",
+        type: "registry:hook",
+        target: "middleware.ts",
+      },
+      {
+        path: "block/next-auth/next-auth-config/app/api/auth/[...nextauth]/route.ts",
+        type: "registry:hook",
+        target: "route.ts",
+      },
+    ],
+  },
 ];

@@ -4,6 +4,16 @@ import { z } from "zod";
 import { registryItemFileSchema } from "@/registry/schema";
 import path from "path";
 
+const blockPath = [
+  "block/next-auth/next-auth-config/",
+  "block/next-auth/next-auth-config-mongodb/",
+];
+
+// return the path index which includes the blockPath
+const getPath = (path: string) => {
+  return blockPath.filter((block) => path.includes(block))[0];
+};
+
 const REGISTRY_BASE_PATH = "registry";
 const PUBLIC_FOLDER_BASE_PATH = "public/registry";
 const COMPONENT_FOLDER_PATH = "components";
@@ -47,12 +57,19 @@ const getComponentFiles = async (files: File[]) => {
       };
     }
     console.log(file.path);
+    // code in the file might content import statements that may have `${REGISTRY_BASE_PATH}/${file.path}` path so remove it and pass it in readFile()
+
     return {
       type: FolderToComponentTypeMap[
         file.path.split("/")[0] as keyof typeof FolderToComponentTypeMap
       ],
-      content: await fs.readFile(`${REGISTRY_BASE_PATH}/${file.path}`, "utf-8"),
-      path: file.path,
+      // replace to "" if there is a match from blockPath
+      content: (
+        await fs.readFile(`${REGISTRY_BASE_PATH}/${file.path}`, "utf-8")
+      )
+        .replace(getPath(file.path), "")
+        .replace(`${REGISTRY_BASE_PATH}/`, ""),
+      path: file.path.replace(getPath(file.path), ""),
       target: `${file.target}`,
     };
   });
