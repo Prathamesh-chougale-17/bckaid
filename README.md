@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BCKAID 🚀
 
-## Getting Started
+> A powerful CLI tool for seamless backend configuration in Next.js applications
 
-First, run the development server:
+## Overview
+
+BCKAID is an open-source configuration system that streamlines the process of setting up backend services in your Next.js projects. With just one command, you can integrate popular backend solutions and authentication systems.
+
+## Features ✨
+
+- **One-Command Setup**: Quick integration of backend services
+- **Authentication Ready**: Easy next-auth configuration
+- **Database Integration**:
+  - MongoDB
+  - PostgreSQL
+  - Database ORM (Drizzle)
+- **Shadcn/ui Compatible**: Seamless integration with shadcn component library
+- **Developer Friendly**: Minimal configuration required
+
+## Installation 📦
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npx shadcn@latest init <json-url>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Quick Start 🎯
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Create a new configuration
+npx shadcn@latest init <json-url>
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Add specific backend service
+npx shadcn@latest add <json-url>
+```
 
-## Learn More
+## Supported Integrations 🔌
 
-To learn more about Next.js, take a look at the following resources:
+- Next-Auth
+- MongoDB
+- PostgreSQL
+- Drizzle ORM
+- More coming soon...
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Documentation 📚
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Visit our [documentation](https://github.com/Prathamesh-chougale-17/bckaid) for detailed guides and examples.
 
-## Deploy on Vercel
+## Contributing 🤝
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+We welcome contributions! Please read our [contributing guidelines](CONTRIBUTING.md) to get started.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License 📄
+
+MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Support 💪
+
+- Star this repo
+- Report issues
+- Submit PRs
+- Share with others
+
+---
+
+Built with ❤️ by Prathamesh Chougale
