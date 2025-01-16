@@ -33,7 +33,7 @@ export const ui: Registry = [
       {
         path: "block/next-auth/next-auth-config/app/api/auth/[...nextauth]/route.ts",
         type: "registry:hook",
-        target: "route.ts",
+        target: "app/api/auth/[...nextauth]/route.ts",
       },
     ],
   },

@@ -22,7 +22,7 @@
       "type": "registry:block",
       "content": "import { handlers } from \"@/auth\"; // Referring to the auth.ts we just created\r\nexport const { GET, POST } = handlers;\r\n",
       "path": "app/api/auth/[...nextauth]/route.ts",
-      "target": "route.ts"
+      "target": "app/api/auth/[...nextauth]/route.ts"
     }
   ]
 }
