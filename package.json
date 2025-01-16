@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "registry:build": "npx tsx ./scripts/build-registry.ts",
     "start": "next start",
     "lint": "next lint"
   },

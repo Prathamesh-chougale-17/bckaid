@@ -39,6 +39,7 @@ npx shadcn@latest add <json-url>
 - MongoDB
 - PostgreSQL
 - Drizzle ORM
+- Clerk
 - More coming soon...
 
 ## Documentation 📚
