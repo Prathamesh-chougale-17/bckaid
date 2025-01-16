@@ -5,7 +5,7 @@ Thank you for your interest in contributing to BCKaid! This document provides gu
 ## Getting Started
 
 1. Fork the repository
-2. Clone your fork: `git clone https://github.com/Prathamesh-chougale-17/bckaid.git`
+2. Clone your fork: `git clone https://github.com/<your_username>/bckaid.git`
 3. Create a new branch: `git checkout -b feature/your-feature-name`
 
 ## Code Guidelines
